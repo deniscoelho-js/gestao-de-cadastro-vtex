@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Estoque - Cadastro de novos produtos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js"></script>
+</head>
+
+<body onload="carregarTotalEstoque('totalEstoque')">
+    <div class="logo">
+        <img src="assets/img/logo.png">
+        <p>Itens no estoque: <span id="totalEstoque">0</span></p>
+    </div>
+    <section class="container">
+
+        <div class="img-bg">
+            <img src="assets/img/bg.png" alt="bg">
+        </div>
+
+        <form class="container-form">
+            <table>
+                <caption class="text-title">Inventário De Produtos E Dados De Clientes</caption>
+                <tr>
+                    <td class="box">Nome Completo:</td>
+                    <td><input id="nomeCompleto" type="text"></td>
+                </tr>
+                <tr>
+                    <td class="box">Endereço Completo:</td>
+                    <td><input id="endCompleto" type="text"></td>
+                </tr>
+                <tr>
+                    <td class="box">Nome Do Produto:</td>
+                    <td><input id="NomeProduto" type="text"></td>
+                </tr>
+                <tr>
+                    <td class="box">Quantidade do produto:</td>
+                    <td>
+                        <select id="qtidadeProduto">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btn" colspan="2" align="center">
+                        <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('nomeCompleto','endCompleto', 'NomeProduto', 'qtidadeProduto')">
+                        <input type="button" value="Ver estoque" class="alinhaBtns" onclick="window.open('estoque.html','_self')">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+
+</html>
